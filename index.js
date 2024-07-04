@@ -16,7 +16,7 @@ async function checkWeather(city = 'kathmandu') {
 
             const data = await response.json();
 
-            const temp = data.main.temp
+            const temp = Math.round(data.main.temp)
             const desc = data.weather[0].description
             const cityName = data.name
             const img = data.weather[0].icon
@@ -44,7 +44,7 @@ async function checkWeather(city = 'kathmandu') {
         }
         const data = await response.json();
 
-        const temp = data.main.temp
+        const temp = Math.round(data.main.temp)
         const desc = data.weather[0].description
         const cityName = data.name
         const img = data.weather[0].icon
@@ -66,5 +66,5 @@ checkWeather();
 
 document.querySelector('.label').addEventListener('click', () => {
     location.reload()
-    console.log('clicked');
+    // console.log('clicked');
 })
