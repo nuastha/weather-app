@@ -120,6 +120,11 @@ body {
   margin-right: 0.6rem;
 }
 
+.extra-info p {
+  margin-right: 0.6rem;
+  font-size: 1.2em;
+}
+
 @media screen and (max-width: 480px) {
   .card {
     padding: 20px 30px;
